@@ -21,23 +21,15 @@ import expensesSelector from './selectors/expenses';
 
 const store = configureStore();
 
-console.log(store.getState());
-
 import getVisibleExpenses from './selectors/expenses'
 
 // Store Update 
 
-store.subscribe(()=> {
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-    console.log(visibleExpenses);
-})
-
-// 
-store.dispatch(actionExpenses.addExpense({ description: 'Water bill', amount: 4500}));
-store.dispatch(actionExpenses.addExpense({ description: 'rent', amount: 109500}));
-store.dispatch(actionExpenses.addExpense({ description: 'Gas bill', createdAt: 1000}));
-store.dispatch(actionFilters.sortByAmount()); // amount
+// store.subscribe(()=> {
+//     const state = store.getState();
+//     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+//     console.log(visibleExpenses);
+// })
 
 // addExpense -> water bill
 // addExpnese -> Gas bill
@@ -48,21 +40,5 @@ const jsx = (
         <AppRouter />
     </Provider>
 );
-
-const demoState = {
-    expense: [{
-        id : 'daslfjdlskaf',
-        description: 'January Rent',
-        note: 'This was the final payment for that address',
-        amount: 54500,
-        createdAt: 0 
-    }],
-    filters: {
-        text: 'rent',
-        sortBy: 'amount', //Date or amount
-        startDate: undefined,
-        endDate: undefined
-    }
-};
 
 ReactDOM.render(jsx, document.getElementById('app'));
