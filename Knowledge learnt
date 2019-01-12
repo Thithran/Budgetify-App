@@ -1,0 +1,17 @@
+Redux is a new way of React to deal with the complexity of product in a large scale 
+Redux helps you 
+- Store state in a hub where every component can access 
+- Reuse components if needed 
+
+Redux stores data in Redux Store, where every component can access and interact with 
+
+
+toBe in jest testing is for number,string ... 
+toEqual is for object 
+
+
+----- Git -----
+Reporistory: folder that sits inside your project 
+"Git add Command" will move files from Untracked Files to Staged Changes 
+"Git commit Command" will moves from Stage Changes (decoded) to Commits
+Then the file is saved in Unstaged Changes
