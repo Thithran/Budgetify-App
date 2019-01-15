@@ -23,18 +23,7 @@ const store = configureStore();
 
 import getVisibleExpenses from './selectors/expenses'
 
-// Store Update 
 
-// store.subscribe(()=> {
-//     const state = store.getState();
-//     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-//     console.log(visibleExpenses);
-// })
-
-// addExpense -> water bill
-// addExpnese -> Gas bill
-// setTextFilter -> bill 
-// get Visible -> print visibles one to the screen
 const jsx = (
     <Provider store={store}>
         <AppRouter />
