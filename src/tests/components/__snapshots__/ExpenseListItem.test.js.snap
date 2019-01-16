@@ -11,9 +11,12 @@ exports[`Should render Item with fixture data 1`] = `
     </h3>
   </Link>
   <p>
-    1
-     - 
-    -345600000
+    €0,01
+      
+     
+    -
+     
+    December 28th, 1969
   </p>
   <button
     onClick={[Function]}
