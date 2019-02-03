@@ -1,9 +1,21 @@
+----- React -----
+There are two types of dta that react components "listen" or react to: state and props 
+PROPS are get from the parent and tehey are not going to change during the lifetime of the component 
+STATE is used for the data model that is going to change 
+The component is re-rendered when stat or props are changed 
+
+PROPS and STATE are pure JavaScript object
+
+render must return single element but you can wrap multiple elements inside one parent element. 
+
 Redux is a new way of React to deal with the complexity of product in a large scale 
 Redux helps you 
 - Store state in a hub where every component can access 
 - Reuse components if needed 
 
+
 Redux stores data in Redux Store, where every component can access and interact with 
+
 
 
 toBe in jest testing is for number,string ... 
@@ -17,6 +29,7 @@ Reporistory: folder that sits inside your project
 Then the file is saved in Unstaged Changes
 
 
-
 ---- Server ---- 
 Server is created with Express, using Node 
+
+

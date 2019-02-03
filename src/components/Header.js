@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
-    <header>
-        <h1>Budgetify</h1>
-        <NavLink exact to="/" activeClassName="active">Home page </NavLink>
-        <NavLink to="/create" activeClassName="active">Create </NavLink>
-    </header>
-)
+  <header>
+    <h1>Budgetify</h1>
+    <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink> 
+    {` `}
+    <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink>
+  </header>
+);
 
 export default Header;

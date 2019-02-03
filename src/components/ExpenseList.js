@@ -1,29 +1,30 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
-import expenseSelector from '../selectors/expenses'
+import selectExpenses from '../selectors/expenses';
+import selectExpensesTotal from '../selectors/expenses-total';
+import ExpenseTotal from './ExpenseTotal';
+import numeral from 'numeral';
+
 export const ExpenseList = (props) => (
-    <div>
-    {   
-        props.expenses.length === 0 ? (
-            <p>No expenses</p>
-        ) : (
-            props.expenses.map(el => 
-            <ExpenseListItem 
-                key={el.id}
-                {...el}
-            />)
+  <div>
+    {
+      props.expenses.length === 0 ? (
+        <p>No expenses</p>
+      ) : (
+          props.expenses.map((expense) => {
+            return <ExpenseListItem key={expense.id} {...expense} />;
+          })
+          
         )
     }
-    {}
-    </div>
+  </div>
 );
 
-const ConnectedExpenseList = connect((state) => {
-    return {
-        expenses: expenseSelector        (state.expenses, {...state.filters})    
-    };
-    
-})(ExpenseList);
+const mapStateToProps = (state) => {
+  return {
+    expenses: selectExpenses(state.expenses, state.filters),
+  };
+};
 
-export default ConnectedExpenseList;
+export default connect(mapStateToProps)(ExpenseList);

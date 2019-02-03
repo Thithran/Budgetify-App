@@ -1,27 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Item with fixture data 1`] = `
+exports[`should render ExpenseListItem correctly 1`] = `
 <div>
   <Link
     replace={false}
-    to="/edit/2"
+    to="/edit/1"
   >
     <h3>
-      rent
+      Gum
     </h3>
   </Link>
   <p>
-    €0,01
-      
-     
+    $1.95
     -
-     
-    December 28th, 1969
+    December 31st, 1969
   </p>
-  <button
-    onClick={[Function]}
-  >
-    Remove
-  </button>
 </div>
 `;
